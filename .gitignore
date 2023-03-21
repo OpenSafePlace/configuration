@@ -1,0 +1,18 @@
+## macOS
+.DS_Store
+
+## Configuration
+.project+settings
+.project+keys
+##
+Logs/*
+!Logs/_README.md
+##
+Other/*
+!Other/_README.md
+##
+Bridge/*
+!Bridge/_README.md
+##
+.Bricks/Containers/.*
+.Bricks/Types/.*
