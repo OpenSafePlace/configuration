@@ -16,7 +16,7 @@ services:
     networks:
       - net
     environment:
-      - DISPLAY=host.docker.internal:0
+      - DISPLAY=${project_display}
 
 networks:
   net:
