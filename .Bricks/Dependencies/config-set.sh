@@ -10,6 +10,7 @@ echo "project_beep=\"$global__project_beep\"" >> $project_main_folder/.project+s
 echo "project_power=\"$global__project_power\"" >> $project_main_folder/.project+settings
 echo "project_os=\"$global__project_os\"" >> $project_main_folder/.project+settings
 echo "project_os_version=\"$global__project_os_version\"" >> $project_main_folder/.project+settings
+echo "project_display=\"$global__project_display\"" >> $project_main_folder/.project+settings
 echo "project_create_time=\"$global__project_create_time\"" >> $project_main_folder/.project+settings
 echo "project_host_private_ip=\"$global__project_host_private_ip\"" >> $project_main_folder/.project+settings
 echo "project_host_os_type=\"$global__project_host_os_type\"" >> $project_main_folder/.project+settings
