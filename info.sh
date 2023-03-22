@@ -37,6 +37,7 @@ info "Выделено ядер процессора проекту => $global__
 info "Выделено мегабайт ОЗУ проекту => $global__project_mem"
 info "Архитектура процессора => $global__project_host_cpu_type"
 info "Сокет docker.sock => $global__project_host_docker_sock"
+info "Тип операционной системы ПК => $global__project_host_os_type"
 info "Дата и время разворачивания проекта => $global__project_create_time"
 info "Количество контейнеров проекта => $global__project_containers_count_created"
 info "Операционная система проекта => $global__project_os ($global__project_os_version)"
