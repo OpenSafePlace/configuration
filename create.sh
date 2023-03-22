@@ -54,6 +54,11 @@ global__project_host_os_type="macOS"
 global__project_host_docker_sock="unix:///run/docker.sock" ||
 global__project_host_docker_sock="unix:///var/run/docker.sock"
 ##
+## Get host ip
+[ "$global__project_host_os_type" == "linux" ] &&
+global__project_host_private_ip=$(hostname -I | awk '{ print $1 }') ||
+global__project_host_private_ip=$(ipconfig getifaddr en0)
+##
 ## Show current date & time
 info "$(date '+%H:%M:%S (%d/%m/%Y)')"
 ##
