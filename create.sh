@@ -50,7 +50,7 @@ global__project_host_os_type="linux" ||
 global__project_host_os_type="macOS"
 ##
 ## Choose Docker sock
-[ "$global__project_os" == "linux" ] &&
+[ "$global__project_host_os_type" == "linux" ] &&
 global__project_host_docker_sock="unix:///run/docker.sock" ||
 global__project_host_docker_sock="unix:///var/run/docker.sock"
 ##
