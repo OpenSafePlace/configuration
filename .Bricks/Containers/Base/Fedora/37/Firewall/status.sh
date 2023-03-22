@@ -2,7 +2,9 @@
 
 # General process
 ## Show ports status
-info "В контейнере 'Base' информация из брандмауэра:"
+info "В контейнере 'Base' информация из брандмауэра"
+##
+space
 ##
 space_null
 ##

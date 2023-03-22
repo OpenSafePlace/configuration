@@ -4,6 +4,8 @@
 ## Show volumes list
 info "Список томов"
 ##
+space
+##
 space_null
 ##
 docker volume ls >&3

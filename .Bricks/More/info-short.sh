@@ -4,6 +4,8 @@
 ## Show short information
 info "Короткая информация"
 ##
+space
+##
 space_null
 ##
 ## Output disk usage
