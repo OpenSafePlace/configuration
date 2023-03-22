@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: ../../../.Bricks/Containers/Base/${project_os}/${project_os_version}/foundation
-    image: custom-${project_os}-${project_os_version}-v1
+    image: custom-${project_os_lowercase}-${project_os_version}-v1
     hostname: base
     tty: true
     container_name: ${project_name}-base
