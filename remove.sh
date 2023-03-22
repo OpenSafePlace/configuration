@@ -22,6 +22,9 @@ project_main_folder="."
 ## Execute types set
 . $project_main_folder/.Bricks/Dependencies/types-set-execute.sh
 ##
+## Stop use GUI mode if needed
+. $project_main_folder/.Bricks/Dependencies/stop-use-gui.sh
+##
 ## Show current date & time
 info "$(date '+%H:%M:%S (%d/%m/%Y)')"
 ##
@@ -50,7 +53,7 @@ case $choice in
 esac
 ##
 ## Remove containers, networks and volumes of configuration
-docker-compose -f $project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name down -v --rmi all --remove-orphans
+project_os=$global__project_os project_os_lowercase=$(echo $global__project_os | tr '[:upper:]' '[:lower:]') project_os_version=$global__project_os_version docker-compose -f $project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name down -v --rmi all --remove-orphans
 ##
 ## Delete config file
 sh -c "rm -f $project_main_folder/.project+settings"
