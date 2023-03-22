@@ -14,7 +14,7 @@ global__project_os_version="37"
 global__project_keys+=($(openssl rand -base64 33) "['public'] + ['sudo']")
 ##
 ## Create new containers, networks and volumes
-project_name=$global__project_name project_os=$(echo $global__project_os | tr '[:upper:]' '[:lower:]') project_os_version=$global__project_os_version docker-compose -f $project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name up --build -d
+project_name=$global__project_name project_os=$global__project_os project_os_lowercase=$(echo $global__project_os | tr '[:upper:]' '[:lower:]') project_os_version=$global__project_os_version project_display=$global__project_display docker-compose -f $project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name up --build -d
 ##
 ## Install and configure packages
 . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Setup/config-manager.sh
