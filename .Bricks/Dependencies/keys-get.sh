@@ -36,8 +36,8 @@ global__project_keys=()
 ##
 for i in $(seq 1 $project_keys_count)
 do
-## Get keys from file
 ##
+## Get keys from file
 project_key_text="project_keys_${i}_text"
 project_key_text="${!project_key_text}"
 project_key_text=$(echo $project_key_text | openssl base64 -d | openssl enc -d -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -k $choice)

@@ -40,11 +40,11 @@ echo "project_keys_count=\"$global__project_keys_count\"" > $project_main_folder
 ##
 for i in $(seq 0 $(($global__project_keys_count-1)))
 do
-## Add keys to file
 ##
 project_key_text_enc=$(echo ${global__project_keys[$i]} | openssl enc -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -salt -k $choice | openssl base64 | tr -d '\n')
 project_key_info=${global__project_keys[$(($i+1))]}
 ##
+## Add encrypted keys to file
 echo "project_keys_$(($i+1))_text=\"$project_key_text_enc\"" >> $project_main_folder/.project+keys
 echo "project_keys_$(($i+1))_info=\"$project_key_info\"" >> $project_main_folder/.project+keys
 ##
