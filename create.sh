@@ -43,6 +43,7 @@ global__project_power="highest"
 global__project_cpu=$(docker system info --format '{{.NCPU}}')
 global__project_mem=$(docker system info --format '{{.MemTotal}}' | awk '{ print int($1/1024/1024) }')
 global__project_keys=()
+global__project_host_user=$(whoami)
 ##
 ## Determine the OS type
 [ "$OSTYPE" == "linux-gnu" ] &&

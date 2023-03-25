@@ -38,6 +38,7 @@ global__project_os=${project_os}
 global__project_os_version=${project_os_version}
 global__project_display=${project_display}
 global__project_create_time=${project_create_time}
+global__project_host_user=$(whoami)
 global__project_host_private_ip=${project_host_private_ip}
 global__project_host_os_type=${project_host_os_type}
 global__project_host_cpu_type=${project_host_cpu_type}
