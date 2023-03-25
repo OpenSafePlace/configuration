@@ -34,7 +34,7 @@ warning "Процесс остановлен"
 exit 1
 }
 ##
-## Immutable params
+## Some vars of project
 global__project_name=$(openssl rand -hex 6)
 global__project_create_time=$(date '+%H:%M:%S (%d/%m/%Y)')
 global__project_list_types=$(cd ./.Bricks/Types && ls -md -- *)
