@@ -9,7 +9,7 @@ services:
     tty: true
     container_name: ${project_name}-base
     volumes:
-      - ../../../Bridge:/project/bridge:rw
+      - ../../../Bridge:/bridge:rw
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     ports:
       - 127.0.0.1:10100:10100
