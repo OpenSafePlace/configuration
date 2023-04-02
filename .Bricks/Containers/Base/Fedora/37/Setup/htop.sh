@@ -61,7 +61,7 @@ inside 1 public base "echo \".sort_direction=-1\" >> /home/public/.config/htop/h
 inside 1 public base "echo \".tree_sort_direction=-1\" >> /home/public/.config/htop/htoprc"
 inside 1 public base "echo \".all_branches_collapsed=0\" >> /home/public/.config/htop/htoprc"
 ##
-## Configure power
+## Configure launch
 inside 1 public base "echo 'alias htop=\"cpulimit --limit=\$global__project_power --lazy --include-children htop --no-color --delay=10 --tree --sort-key=PERCENT_CPU\"' >> /home/public/.zsh_alias"
 ##
 info "В контейнере 'Base' настроен пакет 'htop'"
