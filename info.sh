@@ -33,8 +33,8 @@ space
 ##
 info "Название проекта => $global__project_name"
 info "Конфигурация проекта => $global__project_type"
-info "Выделено ядер процессора проекту => $global__project_cpu"
-info "Выделено мегабайт ОЗУ проекту => $global__project_mem"
+info "Выделено ядер процессора проекту => $global__project_cpu_cores_count"
+info "Выделено мегабайт ОЗУ проекту => $global__project_mem_count"
 info "Архитектура процессора => $global__project_host_cpu_type"
 info "Сокет docker.sock => $global__project_host_docker_sock"
 info "Текущий пользователь ПК => $global__project_host_user"

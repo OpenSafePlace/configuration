@@ -40,8 +40,8 @@ global__project_create_time=$(date '+%H:%M:%S (%d/%m/%Y)')
 global__project_list_types=$(cd ./.Bricks/Types && ls -md -- *)
 global__project_host_cpu_type=$(uname -m)
 global__project_power="highest"
-global__project_cpu=$(docker system info --format '{{.NCPU}}')
-global__project_mem=$(docker system info --format '{{.MemTotal}}' | awk '{ print int($1/1024/1024) }')
+global__project_cpu_cores_count=$(docker system info --format '{{.NCPU}}')
+global__project_mem_count=$(docker system info --format '{{.MemTotal}}' | awk '{ print int($1/1024/1024) }')
 global__project_keys=()
 global__project_host_user=$(whoami)
 ##
