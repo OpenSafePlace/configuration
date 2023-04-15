@@ -23,6 +23,7 @@ inside 1 public base "echo 'PROMPT=\"| %n@%m %1 => \"' >> /home/public/.zshrc"
 inside 1 public base "echo 'export HISTFILE=/home/public/.zsh_history' >> /home/public/.zshrc"
 inside 1 public base "echo 'export HISTSIZE=10000' >> /home/public/.zshrc"
 inside 1 public base "echo 'export SAVEHIST=10000' >> /home/public/.zshrc"
+inside 1 public base "echo 'export PATH=\$PATH:/home/public/.local/bin' >> /home/public/.zshrc"
 inside 1 public base "echo 'cd ~/' >> /home/public/.zshrc"
 ##
 info "В контейнере 'Base' настроен пакет 'zsh'"
