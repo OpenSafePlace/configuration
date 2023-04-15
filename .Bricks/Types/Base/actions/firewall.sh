@@ -16,27 +16,27 @@ case $choice in
 "1")
     space
     ##
-    . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Firewall/status.sh
+    . $global__project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Firewall/status.sh
     ;;
 "2")
     space
     ##
-    . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Firewall/Open/10100.sh
+    . $global__project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Firewall/Open/10100.sh
     ;;
 "3")
     space
     ##
-    . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Firewall/Open/10100.sh
+    . $global__project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Firewall/Open/10100.sh
     ;;
 "4")
     space
     ##
-    . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Firewall/Close/10100.sh
+    . $global__project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Firewall/Close/10100.sh
     ;;
 *)
     ##
     ## Message exit
-    . $project_main_folder/.Bricks/Dependencies/message-exit.sh
+    . $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
     ##
     ## Exit with code
     exit 0

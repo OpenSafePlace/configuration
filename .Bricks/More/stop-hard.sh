@@ -17,7 +17,7 @@ case $choice in
     info "Процесс остановлен"
     ##
     ## Message exit
-    . $project_main_folder/.Bricks/Dependencies/message-exit.sh
+    . $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
     ##
     ## Exit with code
     exit 0

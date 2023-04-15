@@ -34,18 +34,22 @@ info "Рекомендуется записать пароль"
 global__project_keys_count=$((${#global__project_keys[@]}/2))
 ##
 ## Create project file with encrypted keys
-touch $project_main_folder/.project+keys
+touch $global__project_main_folder/.project+keys
 ##
-echo "project_keys_count=\"$global__project_keys_count\"" > $project_main_folder/.project+keys
+echo "project_keys_count=\"$global__project_keys_count\"" > $global__project_main_folder/.project+keys
 ##
 for i in $(seq 0 $(($global__project_keys_count-1)))
 do
 ##
-project_key_text_enc=$(echo ${global__project_keys[$i]} | openssl enc -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -salt -k $choice | openssl base64 | tr -d '\n')
-project_key_info=${global__project_keys[$(($i+1))]}
+local__project_key_text_enc=$(echo ${global__project_keys[$i]} | openssl enc -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -salt -k $choice | openssl base64 | tr -d '\n')
+local__project_key_info=${global__project_keys[$(($i+1))]}
 ##
 ## Add encrypted keys to file
-echo "project_keys_$(($i+1))_text=\"$project_key_text_enc\"" >> $project_main_folder/.project+keys
-echo "project_keys_$(($i+1))_info=\"$project_key_info\"" >> $project_main_folder/.project+keys
+echo "project_keys_$(($i+1))_text=\"$local__project_key_text_enc\"" >> $global__project_main_folder/.project+keys
+echo "project_keys_$(($i+1))_info=\"$local__project_key_info\"" >> $global__project_main_folder/.project+keys
 ##
 done
+##
+## Unset local vars
+unset local__project_key_text_enc
+unset local__project_key_info

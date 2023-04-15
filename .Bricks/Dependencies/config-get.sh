@@ -2,7 +2,7 @@
 
 # General process
 ## Check project
-[[ ! -f $project_main_folder/.project+settings ]] && {
+[[ ! -f $global__project_main_folder/.project+settings ]] && {
 ##
 ## Output warning info
 warning "Конфигурация не развернута"
@@ -10,14 +10,14 @@ warning "Используйте файл 'create.sh'"
 warning "Процесс остановлен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 1
 }
 ##
 ## Include
-source $project_main_folder/.project+settings
+source $global__project_main_folder/.project+settings
 ##
 ## Vars Docker
 export project_name=${project_name}
@@ -47,4 +47,3 @@ global__project_containers_count_all=$([ "$project_containers_count_all" ] && ec
 global__project_containers_count_created=$(docker ps -a -f "name=${global__project_name}-" | sed '1d' | wc -l | xargs)
 global__project_containers_count_running=$(docker container ls -f "name=${global__project_name}-" | sed '1d' | wc -l | xargs)
 global__project_script_name=${0##*/}
-global__project_keys=()

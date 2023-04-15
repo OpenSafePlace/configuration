@@ -20,3 +20,6 @@ local__project_power_percent=$(($global__project_cpu_cores_count * 8))
 ## Update params (container: base)
 inside 1 public base "echo -n '' > /home/public/.zsh_params"
 inside 1 public base "echo -n 'export global__project_power=$local__project_power_percent' >> /home/public/.zsh_params"
+##
+## Unset local vars
+unset local__project_power_percent

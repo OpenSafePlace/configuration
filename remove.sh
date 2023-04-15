@@ -2,28 +2,28 @@
 
 # General process
 ## There should be no '/' at the end
-project_main_folder="."
+global__project_main_folder="."
 ##
 ## Output threads
-. $project_main_folder/.Bricks/Dependencies/use-log.sh
+. $global__project_main_folder/.Bricks/Dependencies/use-log.sh
 ##
 ## Messages types set
-. $project_main_folder/.Bricks/Dependencies/types-set-message.sh
+. $global__project_main_folder/.Bricks/Dependencies/types-set-message.sh
 ##
 ## Check installed packages
-. $project_main_folder/.Bricks/Dependencies/check-packages.sh
+. $global__project_main_folder/.Bricks/Dependencies/check-packages.sh
 ##
 ## Get project config
-. $project_main_folder/.Bricks/Dependencies/config-get.sh
+. $global__project_main_folder/.Bricks/Dependencies/config-get.sh
 ##
 ## Check running project
-. $project_main_folder/.Bricks/Dependencies/check-project.sh
+. $global__project_main_folder/.Bricks/Dependencies/check-project.sh
 ##
 ## Execute types set
-. $project_main_folder/.Bricks/Dependencies/types-set-execute.sh
+. $global__project_main_folder/.Bricks/Dependencies/types-set-execute.sh
 ##
 ## Stop use GUI mode if needed
-. $project_main_folder/.Bricks/Dependencies/stop-use-gui.sh
+. $global__project_main_folder/.Bricks/Dependencies/stop-use-gui.sh
 ##
 ## Show current date & time
 info "$(date '+%H:%M:%S (%d/%m/%Y)')"
@@ -45,7 +45,7 @@ case $choice in
     info "Процесс остановлен"
     ##
     ## Message exit
-    . $project_main_folder/.Bricks/Dependencies/message-exit.sh
+    . $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
     ##
     ## Exit with code
     exit 0
@@ -53,13 +53,13 @@ case $choice in
 esac
 ##
 ## Remove containers, networks and volumes of project
-project_os=$global__project_os project_os_lowercase=$(echo $global__project_os | tr '[:upper:]' '[:lower:]') project_os_version=$global__project_os_version docker-compose -f $project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name down -v --rmi all --remove-orphans
+project_os=$global__project_os project_os_lowercase=$(echo $global__project_os | tr '[:upper:]' '[:lower:]') project_os_version=$global__project_os_version docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name down -v --rmi all --remove-orphans
 ##
 ## Delete config file
-sh -c "rm -f $project_main_folder/.project+settings"
+sh -c "rm -f $global__project_main_folder/.project+settings"
 ##
 ## Delete keys file
-sh -c "rm -f $project_main_folder/.project+keys"
+sh -c "rm -f $global__project_main_folder/.project+keys"
 ##
 input "Вы хотите удалить журналы проекта? (y/n)\n"
 input "=> "
@@ -73,7 +73,7 @@ case $choice in
     info "Процесс удаления проекта завершен"
     ##
     ## Message exit
-    . $project_main_folder/.Bricks/Dependencies/message-exit.sh
+    . $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
     ##
     ## Exit with code
     exit 0
@@ -81,7 +81,7 @@ case $choice in
 esac
 ##
 ## Delete logs of the project
-sh -c "rm -rf $project_main_folder/Logs/*"
+sh -c "rm -rf $global__project_main_folder/Logs/*"
 ##
 space
 ##
@@ -94,7 +94,7 @@ case $choice in
 "y")
     ## Delete user data
     ##
-    sh -c "rm -rf $project_main_folder/Bridge/*"
+    sh -c "rm -rf $global__project_main_folder/Bridge/*"
     ;;
 esac
 ##
@@ -103,7 +103,7 @@ space
 info "Процесс удаления проекта завершен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 0

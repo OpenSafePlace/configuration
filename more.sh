@@ -2,19 +2,19 @@
 
 # General process
 ## There should be no '/' at the end
-project_main_folder="."
+global__project_main_folder="."
 ##
 ## Output threads
-. $project_main_folder/.Bricks/Dependencies/use-log.sh
+. $global__project_main_folder/.Bricks/Dependencies/use-log.sh
 ##
 ## Messages types set
-. $project_main_folder/.Bricks/Dependencies/types-set-message.sh
+. $global__project_main_folder/.Bricks/Dependencies/types-set-message.sh
 ##
 ## Check installed packages
-. $project_main_folder/.Bricks/Dependencies/check-packages.sh
+. $global__project_main_folder/.Bricks/Dependencies/check-packages.sh
 ##
 ## Execute types set
-. $project_main_folder/.Bricks/Dependencies/types-set-execute.sh
+. $global__project_main_folder/.Bricks/Dependencies/types-set-execute.sh
 ##
 ## Show current date & time
 info "$(date '+%H:%M:%S (%d/%m/%Y)')"
@@ -45,57 +45,57 @@ case $choice in
 "1")
     space
     ##
-    . $project_main_folder/.Bricks/More/monitor.sh
+    . $global__project_main_folder/.Bricks/More/monitor.sh
     ;;
 "2")
     space
     ##
-    . $project_main_folder/.Bricks/More/info-short.sh
+    . $global__project_main_folder/.Bricks/More/info-short.sh
     ;;
 "3")
     space
     ##
-    . $project_main_folder/.Bricks/More/info-full.sh
+    . $global__project_main_folder/.Bricks/More/info-full.sh
     ;;
 "4")
     space
     ##
-    . $project_main_folder/.Bricks/More/container-list.sh
+    . $global__project_main_folder/.Bricks/More/container-list.sh
     ;;
 "5")
     space
     ##
-    . $project_main_folder/.Bricks/More/image-list.sh
+    . $global__project_main_folder/.Bricks/More/image-list.sh
     ;;
 "6")
     space
     ##
-    . $project_main_folder/.Bricks/More/networks-list.sh
+    . $global__project_main_folder/.Bricks/More/networks-list.sh
     ;;
 "7")
     space
     ##
-    . $project_main_folder/.Bricks/More/volumes-list.sh
+    . $global__project_main_folder/.Bricks/More/volumes-list.sh
     ;;
 "8")
     space
     ##
-    . $project_main_folder/.Bricks/More/stop-hard.sh
+    . $global__project_main_folder/.Bricks/More/stop-hard.sh
     ;;
 "9")
     space
     ##
-    . $project_main_folder/.Bricks/More/remove-special.sh
+    . $global__project_main_folder/.Bricks/More/remove-special.sh
     ;;
 "10")
     space
     ##
-    . $project_main_folder/.Bricks/More/remove-all.sh
+    . $global__project_main_folder/.Bricks/More/remove-all.sh
     ;;
 esac
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 0

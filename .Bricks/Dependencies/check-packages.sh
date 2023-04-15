@@ -10,7 +10,7 @@ warning "Без него работа проекта невозможна"
 warning "Процесс остановлен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 1
@@ -25,7 +25,7 @@ warning "Без него работа проекта невозможна"
 warning "Процесс остановлен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 1
@@ -40,7 +40,7 @@ warning "Без него работа проекта невозможна"
 warning "Процесс остановлен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 1
@@ -55,7 +55,7 @@ warning "Без него работа проекта невозможна"
 warning "Процесс остановлен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 1
@@ -70,7 +70,7 @@ warning "Без него работа проекта невозможна"
 warning "Процесс остановлен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 1
@@ -85,7 +85,7 @@ warning "Без него работа проекта невозможна"
 warning "Процесс остановлен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 1
@@ -100,7 +100,7 @@ warning "Без него работа проекта невозможна"
 warning "Процесс остановлен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 1

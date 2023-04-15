@@ -2,7 +2,7 @@
 
 # General process
 ## Check project
-[[ ! -f $project_main_folder/.project+keys ]] && {
+[[ ! -f $global__project_main_folder/.project+keys ]] && {
 ##
 ## Output warning info
 warning "Конфигурация не развернута"
@@ -10,14 +10,18 @@ warning "Используйте файл 'create.sh'"
 warning "Процесс остановлен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 1
 }
 ##
 ## Include
-source $project_main_folder/.project+keys
+source $global__project_main_folder/.project+keys
+##
+## Vars global
+global__project_keys_count=${project_keys_count}
+global__project_keys=()
 ##
 info "Видимость вводимых символов на время отключена"
 ##
@@ -31,22 +35,24 @@ read -s -p '' choice
 ##
 space_null
 ##
-## Get the keys in decrypted form
-global__project_keys=()
-##
-for i in $(seq 1 $project_keys_count)
+for i in $(seq 1 $global__project_keys_count)
 do
 ##
 ## Get keys from file
-project_key_text="project_keys_${i}_text"
-project_key_text="${!project_key_text}"
-project_key_text=$(echo $project_key_text | openssl base64 -d | openssl enc -d -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -k $choice)
-project_key_text_count=$(echo $project_key_text | wc -c | bc)
+local__project_key_text="project_keys_${i}_text"
+local__project_key_text="${!local__project_key_text}"
+local__project_key_text=$(echo $local__project_key_text | openssl base64 -d | openssl enc -d -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -k $choice)
+local__project_key_text_count=$(echo $local__project_key_text | wc -c | bc)
 ##
-[[ $project_key_text_count != 45 ]] && project_key_text="ОШИБКА" ||
-[[ $project_key_text == *[![:ascii:]]* ]] && project_key_text="ОШИБКА"
+[[ $local__project_key_text_count != 45 ]] && local__project_key_text="ОШИБКА" ||
+[[ $local__project_key_text == *[![:ascii:]]* ]] && local__project_key_text="ОШИБКА"
 ##
-project_key_info="project_keys_${i}_info"
-global__project_keys+=($project_key_text "${!project_key_info}")
+local__project_key_info="project_keys_${i}_info"
+global__project_keys+=($local__project_key_text "${!local__project_key_info}")
 ##
 done
+##
+## Unset local vars
+unset local__project_key_text
+unset local__project_key_text_count
+unset local__project_key_info

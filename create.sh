@@ -2,25 +2,25 @@
 
 # General process
 ## There should be no '/' at the end
-project_main_folder="."
+global__project_main_folder="."
 ##
 ## Output threads
-. $project_main_folder/.Bricks/Dependencies/use-log.sh
+. $global__project_main_folder/.Bricks/Dependencies/use-log.sh
 ##
 ## Messages types set
-. $project_main_folder/.Bricks/Dependencies/types-set-message.sh
+. $global__project_main_folder/.Bricks/Dependencies/types-set-message.sh
 ##
 ## Check installed packages
-. $project_main_folder/.Bricks/Dependencies/check-packages.sh
+. $global__project_main_folder/.Bricks/Dependencies/check-packages.sh
 ##
 ## Check network
-. $project_main_folder/.Bricks/Dependencies/check-network.sh
+. $global__project_main_folder/.Bricks/Dependencies/check-network.sh
 ##
 ## Execute types set
-. $project_main_folder/.Bricks/Dependencies/types-set-execute.sh
+. $global__project_main_folder/.Bricks/Dependencies/types-set-execute.sh
 ##
 ## Check whether project has already been deployed
-[[ -f $project_main_folder/.project+settings ]] && {
+[[ -f $global__project_main_folder/.project+settings ]] && {
 ##
 ## Output warning info
 warning "Конфигурация уже развернута"
@@ -28,7 +28,7 @@ warning "Используйте файл 'remove.sh'"
 warning "Процесс остановлен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 1
@@ -85,7 +85,7 @@ space
 ##
 ## Check the configuration type
 (
-[[ ! -d $project_main_folder/.Bricks/Types/$global__project_type ]] ||
+[[ ! -d $global__project_main_folder/.Bricks/Types/$global__project_type ]] ||
 [[ $global__project_type == '' ]]
 ) && {
 ##
@@ -94,7 +94,7 @@ warning "Некорректное название конфигурации"
 warning "Процесс остановлен"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 1
@@ -120,30 +120,30 @@ space
 docker stop $(docker ps -a -q)
 ##
 ## Install and configure packages
-. $project_main_folder/.Bricks/Types/$global__project_type/actions/create.sh
+. $global__project_main_folder/.Bricks/Types/$global__project_type/actions/create.sh
 ##
 ## Setting the number of containers in scheme file
-global__project_containers_count_all=$(docker-compose -f $project_main_folder/.Bricks/Types/$global__project_type/scheme.yml ps --services | wc -l | tr -d ' ')
+global__project_containers_count_all=$(docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml ps --services | wc -l | tr -d ' ')
 ##
 ## Restart containers
-docker-compose -f $project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name restart
+docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name restart
 ##
 ## Use GUI mode if needed
-. $project_main_folder/.Bricks/Dependencies/use-gui.sh
+. $global__project_main_folder/.Bricks/Dependencies/use-gui.sh
 ##
 ## Preparation of the project after the launch of containers
-. $project_main_folder/.Bricks/Types/$global__project_type/actions/start.sh
+. $global__project_main_folder/.Bricks/Types/$global__project_type/actions/start.sh
 ##
 ## Update project params
-. $project_main_folder/.Bricks/Types/$global__project_type/actions/update-params.sh
+. $global__project_main_folder/.Bricks/Types/$global__project_type/actions/update-params.sh
 ##
 ## Set project config
-. $project_main_folder/.Bricks/Dependencies/config-set.sh
+. $global__project_main_folder/.Bricks/Dependencies/config-set.sh
 ##
 space
 ##
 ## Set project keys
-. $project_main_folder/.Bricks/Dependencies/keys-set.sh
+. $global__project_main_folder/.Bricks/Dependencies/keys-set.sh
 ##
 space
 ##
@@ -155,7 +155,7 @@ space
 info "Установка завершена"
 ##
 ## Message exit
-. $project_main_folder/.Bricks/Dependencies/message-exit.sh
+. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
 ##
 ## Exit with code
 exit 0

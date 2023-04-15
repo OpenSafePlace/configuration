@@ -6,7 +6,7 @@ inside 1 root base "dnf install -y zsh zsh-syntax-highlighting zsh-autosuggestio
 ##
 ## Configure zsh
 inside 1 public base "echo -n '' > /home/public/.zsh_params"
-inside 1 public base "echo 'export global__project_power=\$((\$(nproc --all) * 100))' >> /home/public/.zsh_params"
+inside 1 public base "echo 'export global__project_power=$(($global__project_cpu_cores_count * 100))' >> /home/public/.zsh_params"
 inside 1 public base "echo -n '' > /home/public/.zsh_alias"
 inside 1 public base "echo 'alias neofetch=\"echo '' && neofetch --stdout\"' >> /home/public/.zsh_alias"
 inside 1 public base "echo 'alias ls=\"ls --color=none -p --group-directories-first -X\"' >> /home/public/.zsh_alias"

@@ -17,7 +17,7 @@ case $choice in
     info "Процесс остановлен"
     ##
     ## Message exit
-    . $project_main_folder/.Bricks/Dependencies/message-exit.sh
+    . $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
     ##
     ## Exit with code
     exit 0
@@ -44,9 +44,9 @@ docker volume prune -f
 docker network prune -f
 ##
 ## Delete config file
-sh -c "rm -f $project_main_folder/.project+settings"
+sh -c "rm -f $global__project_main_folder/.project+settings"
 ##
 ## Delete keys file
-sh -c "rm -f $project_main_folder/.project+keys"
+sh -c "rm -f $global__project_main_folder/.project+keys"
 ##
 info "Все проекты на вашем ПК удалены"

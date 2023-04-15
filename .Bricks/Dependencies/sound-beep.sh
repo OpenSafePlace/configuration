@@ -3,4 +3,4 @@
 # General process
 ## Check sound
 [[ $global__project_beep == true ]] &&
-song="\007"
+local__song="\007"

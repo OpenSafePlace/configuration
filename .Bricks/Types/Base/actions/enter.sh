@@ -27,7 +27,7 @@ case $choice in
 *)
     ##
     ## Message exit
-    . $project_main_folder/.Bricks/Dependencies/message-exit.sh
+    . $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
     ##
     ## Exit with code
     exit 0
