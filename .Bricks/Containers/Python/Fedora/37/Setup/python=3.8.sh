@@ -21,5 +21,9 @@ inside 1 public python "echo 'alias pip=\"cpulimit --limit=\$global__project_pow
 ##
 info "В контейнере 'Python' настроен пакет 'python'"
 ##
+## Unset local vars
+unset local__python_version_full
+unset local__python_version_short
+##
 ## Information about the python source (license, tutorial and other)
 ## https://www.python.org/
