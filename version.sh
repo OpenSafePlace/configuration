@@ -21,7 +21,7 @@ info "$(date '+%H:%M:%S (%d/%m/%Y)')"
 ##
 space
 ##
-info "Версия => $global__version"
+info "Версия ядра => $global__version"
 ##
 ## Message exit
 . $project_main_folder/.Bricks/Dependencies/message-exit.sh
