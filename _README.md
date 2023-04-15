@@ -35,9 +35,9 @@
 - "sh название.sh" ⼀ "Запуск файла с расширением .sh".
 
 # Проект выражает благодарность
-- Linux;
-- Fedora Linux;
-- Docker;
+- Linux (https://www.kernel.org/);
+- Fedora Linux (https://getfedora.org/);
+- Docker (https://www.docker.com/);
 - Python (https://www.python.org/);
 - И всем тем модулям, которые используются в данном проекте.
 
