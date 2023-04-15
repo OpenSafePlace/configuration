@@ -38,6 +38,7 @@
 - Linux;
 - Fedora Linux;
 - Docker;
+- Python (https://www.python.org/);
 - И всем тем модулям, которые используются в данном проекте.
 
 ---
