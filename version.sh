@@ -13,7 +13,7 @@ project_main_folder="."
 ## Check installed packages
 . $project_main_folder/.Bricks/Dependencies/check-packages.sh
 ##
-## Get version of configuration
+## Get core version
 . $project_main_folder/.Bricks/Dependencies/version.sh
 ##
 ## Show current date & time

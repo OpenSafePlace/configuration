@@ -33,7 +33,7 @@ info "Рекомендуется записать пароль"
 ## Count keys
 global__project_keys_count=$((${#global__project_keys[@]}/2))
 ##
-## Create a configuration project keys file with encrypted keys
+## Create project file with encrypted keys
 touch $project_main_folder/.project+keys
 ##
 echo "project_keys_count=\"$global__project_keys_count\"" > $project_main_folder/.project+keys

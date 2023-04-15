@@ -78,7 +78,7 @@ global__project_keys=$global__project_keys_new
 ##
 space
 ##
-## Set project configuration keys
+## Set project keys
 . $project_main_folder/.Bricks/Dependencies/keys-set.sh
 ##
 space

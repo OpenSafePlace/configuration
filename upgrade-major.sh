@@ -67,7 +67,7 @@ space
 ##
 info "Рекомендуется проверить файл с отчетом в папке ./Logs"
 ##
-## Set project configuration parameters
+## Set project parameters
 . $project_main_folder/.Bricks/Dependencies/config-set.sh
 ##
 ## Message exit

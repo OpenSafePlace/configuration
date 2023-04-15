@@ -19,7 +19,7 @@ project_main_folder="."
 ## Execute types set
 . $project_main_folder/.Bricks/Dependencies/types-set-execute.sh
 ##
-## Check the configuration type
+## Check whether project has already been deployed
 [[ -f $project_main_folder/.project+settings ]] && {
 ##
 ## Output warning info
@@ -139,7 +139,7 @@ docker-compose -f $project_main_folder/.Bricks/Types/$global__project_type/schem
 ##
 space
 ##
-## Set project configuration keys
+## Set project keys
 . $project_main_folder/.Bricks/Dependencies/keys-set.sh
 ##
 space

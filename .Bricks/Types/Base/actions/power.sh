@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # General process
-## Select the configuration operation mode
+## Select the project operation mode
 input "Список режимов работы проекта:\n"
 input "1. Предел мощности, предел потребления ресурсов\n"
 input "2. Максимальная производительность, низкая экономия ресурсов\n"

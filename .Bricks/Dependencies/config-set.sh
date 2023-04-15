@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # General process
-## Create a configuration project config file (outside)
+## Create project config file (outside)
 touch $project_main_folder/.project+settings
 echo "project_name=\"$global__project_name\"" > $project_main_folder/.project+settings
 echo "project_type=\"$global__project_type\"" >> $project_main_folder/.project+settings
