@@ -10,6 +10,9 @@ global__project_os="Fedora"
 ## Version of the Linux distribution (numbers only)
 global__project_os_version="37"
 ##
+## Power management ('highest' or 'high' or 'medium' or 'low' or 'lowest')
+global__project_power="high"
+##
 ## Create keys
 global__project_keys+=($(openssl rand -base64 33) "['public'] + ['sudo']")
 ##
@@ -48,7 +51,6 @@ project_name=$global__project_name project_os=$global__project_os project_os_low
 . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Setup/catimg.sh
 . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Setup/htop.sh
 . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Setup/clean.sh
-. $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Power/high.sh
 ##
 ## Close all ports
 . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Firewall/Close/10100.sh

@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # General process
-## Select the project operation mode
+## Select the power mode
 input "Список режимов работы проекта:\n"
 input "1. Предел мощности, предел потребления ресурсов\n"
-input "2. Максимальная производительность, низкая экономия ресурсов\n"
+input "2. Высокая производительность, низкая экономия ресурсов\n"
 input "3. Средняя производительность, средняя экономия ресурсов\n"
 input "4. Низкая производительность, высокая экономия ресурсов\n"
 input "5. Предельно низкая производительность, максимальная экономия ресурсов\n"
@@ -17,27 +17,42 @@ case $choice in
 "1")
     space
     ##
-    . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Power/highest.sh
+    ## Set power mode
+    global__project_power="highest"
+    ##
+    info "Включен режим максимальной производительности"
     ;;
 "2")
     space
     ##
-    . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Power/high.sh
+    ## Set power mode
+    global__project_power="high"
+    ##
+    info "Включен режим высокой производительности"
     ;;
 "3")
     space
     ##
-    . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Power/medium.sh
+    ## Set power mode
+    global__project_power="medium"
+    ##
+    info "Включен режим средней производительности"
     ;;
 "4")
     space
     ##
-    . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Power/low.sh
+    ## Set power mode
+    global__project_power="low"
+    ##
+    info "Включен режим низкой производительности"
     ;;
 "5")
     space
     ##
-    . $project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Power/lowest.sh
+    ## Set power mode
+    global__project_power="lowest"
+    ##
+    info "Включен режим минимальной производительности"
     ;;
 *)
     ##

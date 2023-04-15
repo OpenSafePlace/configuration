@@ -30,6 +30,9 @@ space
 ## Launch power management
 . $project_main_folder/.Bricks/Types/$global__project_type/actions/power.sh
 ##
+## Update project params
+. $project_main_folder/.Bricks/Types/$global__project_type/actions/update-params.sh
+##
 ## Set project config
 . $project_main_folder/.Bricks/Dependencies/config-set.sh
 ##
