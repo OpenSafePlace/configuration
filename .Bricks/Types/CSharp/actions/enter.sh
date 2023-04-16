@@ -17,7 +17,7 @@ case $choice in
     ##
     space
     ##
-    info "Популярные команды: sudo, dnf, nano, git, htop, du, catimg"
+    info "Популярные команды: sudo, dnf, nano, git, htop, du, catimg, dotnet"
     ##
     space
     ##

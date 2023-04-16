@@ -39,6 +39,7 @@
 - Fedora Linux (https://getfedora.org/);
 - Docker (https://www.docker.com/);
 - Python (https://www.python.org/);
+- Microsoft (https://dotnet.microsoft.com/);
 - И всем тем модулям, которые используются в данном проекте.
 
 ---
