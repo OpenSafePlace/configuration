@@ -30,6 +30,7 @@ project_name=$global__project_name project_os=$global__project_os project_os_low
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Repositories/Enable/updates-modular.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Repositories/upgrade-minor.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/util-linux-user.sh
+. $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/procps-ng.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Users/root.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Users/public.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/tzdata.sh
