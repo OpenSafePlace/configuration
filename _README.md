@@ -41,6 +41,7 @@
 - Python (https://www.python.org/);
 - Microsoft (https://dotnet.microsoft.com/, https://code.visualstudio.com/);
 - NodeJS (https://nodejs.org/);
+- Yarn (https://yarnpkg.com/, https://classic.yarnpkg.com/);
 - И всем тем модулям, которые используются в данном проекте.
 
 ---
