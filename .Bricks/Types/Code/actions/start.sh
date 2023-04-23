@@ -6,3 +6,6 @@
 ##
 ## Update access
 . $global__project_main_folder/.Bricks/Containers/Code/$global__project_os/$global__project_os_version/Protect/xauthority.sh
+##
+## Services start
+. $global__project_main_folder/.Bricks/Containers/Code/$global__project_os/$global__project_os_version/Services/Start/code.sh
