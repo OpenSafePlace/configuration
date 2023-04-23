@@ -39,7 +39,8 @@
 - Fedora Linux (https://getfedora.org/);
 - Docker (https://www.docker.com/);
 - Python (https://www.python.org/);
-- Microsoft (https://dotnet.microsoft.com/);
+- Microsoft (https://dotnet.microsoft.com/, https://code.visualstudio.com/);
+- NodeJS (https://nodejs.org/);
 - И всем тем модулям, которые используются в данном проекте.
 
 ---
