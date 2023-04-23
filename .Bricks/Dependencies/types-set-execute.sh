@@ -12,7 +12,7 @@ inside() {
     (docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name exec -u $local__user $local__container bash -c "${local__command}")
     ##
     [[ $local__type == 2 ]] &&
-    (docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name exec -u $local__user $local__container zsh -c "${local__command}")
+    (docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name exec -u $local__user $local__container zsh -c "source ~/.zshrc && ${local__command}")
     ##
     [[ $local__type == 3 ]] &&
     (docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name exec -u $local__user $local__container bash)
