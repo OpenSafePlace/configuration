@@ -1,0 +1,47 @@
+version: '3.3'
+services:
+  csharp:
+    build:
+      context: .
+      dockerfile: ../../../.Bricks/Containers/CSharp/${project_os}/${project_os_version}/foundation
+    image: custom-${project_os_lowercase}-${project_os_version}-v1
+    hostname: csharp
+    tty: true
+    container_name: ${project_name}-csharp
+    volumes:
+      - ../../../Bridge:/bridge:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - project:/project:rw
+    ports:
+      - 127.0.0.1:10100:10100
+    networks:
+      - net
+    environment:
+      - DISPLAY=${project_display}
+
+  code:
+    build:
+      context: .
+      dockerfile: ../../../.Bricks/Containers/Code/${project_os}/${project_os_version}/foundation
+    image: custom-${project_os_lowercase}-${project_os_version}-v1
+    hostname: code
+    tty: true
+    container_name: ${project_name}-code
+    volumes:
+      - ../../../Bridge:/bridge:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - project:/project:rw
+    ports:
+      - 127.0.0.1:10101:10101
+    networks:
+      - net
+    environment:
+      - DISPLAY=${project_display}
+
+volumes:
+  project: {}
+
+networks:
+  net:
+    name: ${project_name}-net
+    driver: bridge
