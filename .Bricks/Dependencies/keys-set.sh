@@ -41,8 +41,8 @@ echo "project_keys_count=\"$global__project_keys_count\"" > $global__project_mai
 for i in $(seq 0 $(($global__project_keys_count-1)))
 do
 ##
-local__project_key_text_enc=$(echo ${global__project_keys[$i]} | openssl enc -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -salt -k $choice | openssl base64 | tr -d '\n')
-local__project_key_info=${global__project_keys[$(($i+1))]}
+local__project_key_text_enc=$(echo ${global__project_keys[$(($i*2))]} | openssl enc -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -salt -k $choice | openssl base64 | tr -d '\n')
+local__project_key_info=${global__project_keys[$(($i*2+1))]}
 ##
 ## Add encrypted keys to file
 echo "project_keys_$(($i+1))_text=\"$local__project_key_text_enc\"" >> $global__project_main_folder/.project+keys
