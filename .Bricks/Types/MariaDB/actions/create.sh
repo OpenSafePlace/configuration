@@ -15,6 +15,8 @@ global__project_power="high"
 ##
 ## Create keys
 global__project_keys+=($(openssl rand -base64 33) "['public'] + ['sudo']")
+global__project_keys+=($(openssl rand -base64 33) "['root'] + ['mysql']")
+global__project_keys+=($(openssl rand -base64 33) "['public'] + ['mysql']")
 ##
 ## Create new containers, networks and volumes
 project_name=$global__project_name project_os=$global__project_os project_os_lowercase=$(echo $global__project_os | tr '[:upper:]' '[:lower:]') project_os_version=$global__project_os_version project_display=$global__project_display docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name up --build -d
@@ -51,6 +53,7 @@ project_name=$global__project_name project_os=$global__project_os project_os_low
 . $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Setup/git.sh
 . $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Setup/catimg.sh
 . $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Setup/htop.sh
+. $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Setup/mariadb-server.sh
 . $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Setup/clean.sh
 ##
 ## Close all ports

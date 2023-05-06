@@ -6,3 +6,6 @@
 ##
 ## Update access
 . $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Protect/xauthority.sh
+##
+## Start services
+. $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Services/Start/mariadb.sh
