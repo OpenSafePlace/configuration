@@ -74,7 +74,10 @@ exit 1
 . $global__project_main_folder/.Bricks/Types/$global__project_type/actions/protect.sh
 ##
 ## Apply new keys
-global__project_keys=$global__project_keys_new
+for i in $(seq 0 $((${#global__project_keys[@]}-1)))
+do
+    global__project_keys[$i]=${global__project_keys_new[$i]}
+done
 ##
 space
 ##
