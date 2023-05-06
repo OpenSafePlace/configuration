@@ -5,8 +5,8 @@
 input "Варианты взаимодействия:\n"
 input "1. Узнать информацию по всем открытым портам\n"
 input "2. Установить правила по умолчанию\n"
-input "3. Открыть 10100 порт\n"
-input "4. Закрыть 10100 порт\n"
+input "3. Открыть 3306 порт\n"
+input "4. Закрыть 3306 порт\n"
 input "5. Выйти\n"
 input "=> "
 ##
@@ -21,17 +21,17 @@ case $choice in
 "2")
     space
     ##
-    . $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Firewall/Open/10100.sh
+    . $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Firewall/Open/3306.sh
     ;;
 "3")
     space
     ##
-    . $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Firewall/Open/10100.sh
+    . $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Firewall/Open/3306.sh
     ;;
 "4")
     space
     ##
-    . $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Firewall/Close/10100.sh
+    . $global__project_main_folder/.Bricks/Containers/MariaDB/$global__project_os/$global__project_os_version/Firewall/Close/3306.sh
     ;;
 *)
     ##
