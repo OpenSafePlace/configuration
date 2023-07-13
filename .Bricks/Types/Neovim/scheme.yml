@@ -1,0 +1,24 @@
+version: '3.3'
+services:
+  neovim:
+    build:
+      context: .
+      dockerfile: ../../../.Bricks/Containers/Neovim/${project_os}/${project_os_version}/foundation
+    image: custom-${project_os_lowercase}-${project_os_version}-v1
+    hostname: neovim
+    tty: true
+    container_name: ${project_name}-neovim
+    volumes:
+      - ../../../Bridge:/bridge:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    ports:
+      - 127.0.0.1:10100:10100
+    networks:
+      - net
+    environment:
+      - DISPLAY=${project_display}
+
+networks:
+  net:
+    name: ${project_name}-net
+    driver: bridge
