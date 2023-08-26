@@ -24,7 +24,6 @@ inside 1 public neovim "echo 'export HISTFILE=/home/public/.zsh_history' >> /hom
 inside 1 public neovim "echo 'export HISTSIZE=10000' >> /home/public/.zshrc"
 inside 1 public neovim "echo 'export SAVEHIST=10000' >> /home/public/.zshrc"
 inside 1 public neovim "echo 'export PATH=\$PATH:/home/public/.local/bin' >> /home/public/.zshrc"
-inside 1 public neovim "echo 'cd ~/' >> /home/public/.zshrc"
 ##
 ## Security
 inside 1 public neovim "echo 'ulimit -Sn 1024' >> /home/public/.zshrc"
