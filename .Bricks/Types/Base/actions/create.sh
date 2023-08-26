@@ -51,6 +51,7 @@ project_name=$global__project_name project_os=$global__project_os project_os_low
 . $global__project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Setup/git.sh
 . $global__project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Setup/catimg.sh
 . $global__project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Setup/htop.sh
+. $global__project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Setup/lsof.sh
 . $global__project_main_folder/.Bricks/Containers/Base/$global__project_os/$global__project_os_version/Setup/clean.sh
 ##
 ## Close all ports
