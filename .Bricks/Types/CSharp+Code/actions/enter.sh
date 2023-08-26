@@ -18,10 +18,6 @@ case $choice in
     ##
     space
     ##
-    info "Популярные команды: sudo, dnf, nano, git, htop, du, catimg, dotnet"
-    ##
-    space
-    ##
     ## Enter in container
     inside 10 public csharp >&3
     ;;
@@ -29,10 +25,6 @@ case $choice in
     space
     ##
     info "Чтобы выйти из контейнера напишите 'exit'"
-    ##
-    space
-    ##
-    info "Популярные команды: sudo, dnf, nano, git, htop, du, catimg"
     ##
     space
     ##
