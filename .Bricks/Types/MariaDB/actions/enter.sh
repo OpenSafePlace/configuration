@@ -17,10 +17,6 @@ case $choice in
     ##
     space
     ##
-    info "Популярные команды: sudo, dnf, nano, git, htop, du, catimg, mysql"
-    ##
-    space
-    ##
     ## Enter in container
     inside 10 public mariadb >&3
     ;;
