@@ -33,10 +33,10 @@ inside() {
     (docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name exec --detach --privileged -u $local__user $local__container zsh -c "${local__command}")
     ##
     [[ $local__type == 9 ]] &&
-    (docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name exec --privileged -u $local__user $local__container bash)
+    (docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name exec --privileged -u $local__user -w /home/$local__user $local__container bash)
     ##
     [[ $local__type == 10 ]] &&
-    (docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name exec --privileged -u $local__user $local__container zsh)
+    (docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name exec --privileged -u $local__user -w /home/$local__user $local__container zsh)
     ##
     [[ $local__type == 11 ]] &&
     (docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name exec --privileged -u $local__user $local__container bash -c "${local__command}")
