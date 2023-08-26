@@ -17,10 +17,6 @@ case $choice in
     ##
     space
     ##
-    info "Популярные команды: sudo, dnf, nano, git, htop, du, catimg, python, pip"
-    ##
-    space
-    ##
     ## Enter in container
     inside 10 public python >&3
     ;;
