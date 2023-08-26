@@ -26,4 +26,7 @@ inside 1 public base "echo 'export SAVEHIST=10000' >> /home/public/.zshrc"
 inside 1 public base "echo 'export PATH=\$PATH:/home/public/.local/bin' >> /home/public/.zshrc"
 inside 1 public base "echo 'cd ~/' >> /home/public/.zshrc"
 ##
+## Security
+inside 1 public base "echo 'ulimit -Sn 1024' >> /home/public/.zshrc"
+##
 info "В контейнере 'Base' настроен пакет 'zsh'"
