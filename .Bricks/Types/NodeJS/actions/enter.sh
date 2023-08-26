@@ -17,10 +17,6 @@ case $choice in
     ##
     space
     ##
-    info "Популярные команды: sudo, dnf, nano, git, htop, du, catimg, node, npm"
-    ##
-    space
-    ##
     ## Enter in container
     inside 10 public nodejs >&3
     ;;
