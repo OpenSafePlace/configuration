@@ -80,8 +80,8 @@ space
 ##
 space
 ##
-## Project check keys
-[[ $project_key_text == "ОШИБКА" ]] && {
+## Check general key
+[[ $local__project_key_text == "ОШИБКА" ]] && {
 ##
 ## Output warning info
 warning "Введен неправильный пароль"

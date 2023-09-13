@@ -59,8 +59,8 @@ global__project_keys_new=()
 ##
 space
 ##
-## Check project
-[[ $project_key_text == "ОШИБКА" ]] && {
+## Check general key
+[[ $local__project_key_text == "ОШИБКА" ]] && {
 ##
 ## Output warning info
 warning "Введен неправильный пароль"

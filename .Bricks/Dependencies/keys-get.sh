@@ -53,6 +53,5 @@ global__project_keys+=($local__project_key_text "${!local__project_key_info}")
 done
 ##
 ## Unset local vars
-unset local__project_key_text
 unset local__project_key_text_count
 unset local__project_key_info
