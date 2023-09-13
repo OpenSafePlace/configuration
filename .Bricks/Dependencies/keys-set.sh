@@ -34,7 +34,8 @@ info "Рекомендуется записать пароль"
 global__project_keys_count=$((${#global__project_keys[@]}/2))
 ##
 ## Create project file with encrypted keys
-touch $global__project_main_folder/.project+keys
+sh -c "touch $global__project_main_folder/.project+keys"
+sh -c "chmod 600 ./.project+keys"
 ##
 echo "project_keys_count=\"$global__project_keys_count\"" > $global__project_main_folder/.project+keys
 ##
