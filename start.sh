@@ -4,6 +4,9 @@
 ## There should be no '/' at the end
 global__project_main_folder="."
 ##
+## Create regular folders
+. $global__project_main_folder/.Bricks/Dependencies/regular-folders.sh
+##
 ## Output threads
 . $global__project_main_folder/.Bricks/Dependencies/use-log.sh
 ##
