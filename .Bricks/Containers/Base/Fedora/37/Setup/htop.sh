@@ -64,4 +64,7 @@ inside 1 public base "echo \".all_branches_collapsed=0\" >> /home/public/.config
 ## Configure launch
 inside 1 public base "echo 'alias htop=\"cpulimit --limit=\$global__project_power --lazy --include-children htop --no-color --delay=10 --tree --sort-key=PERCENT_CPU\"' >> /home/public/.zsh_alias"
 ##
+## Security
+inside 1 public base "chmod 700 -R /home/public/.config/htop"
+##
 info "В контейнере 'Base' настроен пакет 'htop'"

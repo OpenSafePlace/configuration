@@ -27,5 +27,6 @@ inside 1 public base "echo 'export PATH=\$PATH:/home/public/.local/bin' >> /home
 ##
 ## Security
 inside 1 public base "echo 'ulimit -Sn 1024' >> /home/public/.zshrc"
+inside 1 public base "chmod 700 /home/public/.zsh*"
 ##
 info "В контейнере 'Base' настроен пакет 'zsh'"
