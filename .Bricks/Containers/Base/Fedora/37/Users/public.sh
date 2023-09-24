@@ -5,11 +5,16 @@
 inside 1 root base "useradd -m public"
 ##
 ## Create project directories and links
-inside 1 root base "mkdir -p /project"
-inside 1 root base "chmod 700 /project"
-inside 1 root base "chown public:public /project"
-inside 1 public base "mkdir -p /home/public/other"
-inside 1 public base "chmod 700 /home/public/other"
+##
+## Create regular folders
+inside 1 root base "mkdir /project /bridge /bridge/incoming /bridge/outgoing"
+inside 1 public base "mkdir /home/public/other /home/public/.config"
+##
+## Set rules for regular folders
+inside 1 root base "chown public:public -R /home/public /project /bridge"
+inside 1 root base "chmod 700 -R /home/public /project /bridge"
+##
+## Create links to regular folders
 inside 1 public base "ln -s /bridge /home/public/bridge"
 inside 1 public base "ln -s /project /home/public/project"
 ##
