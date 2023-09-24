@@ -14,5 +14,8 @@ Other/*
 Bridge/*
 !Bridge/_README.md
 ##
+Backups/*
+!Backups/_README.md
+##
 .Bricks/Containers/.*
 .Bricks/Types/.*
