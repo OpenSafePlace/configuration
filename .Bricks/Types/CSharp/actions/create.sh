@@ -31,6 +31,7 @@ project_name=$global__project_name project_os=$global__project_os project_os_low
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Repositories/upgrade-minor.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/util-linux-user.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/procps-ng.sh
+. $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/openssl.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Users/root.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Users/public.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/tzdata.sh
@@ -51,6 +52,9 @@ project_name=$global__project_name project_os=$global__project_os project_os_low
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/git.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/catimg.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/htop.sh
+. $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/tree.sh
+. $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/ripgrep.sh
+. $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/lsof.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/dotnet=7.0.sh
 . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Setup/clean.sh
 ##
