@@ -5,7 +5,7 @@
 local__dotnet_version_short="7.0"
 ##
 ## Setup package
-inside 1 root csharp "dnf install -y krb5-libs libicu openssl-libs zlib tar"
+inside 1 root csharp "dnf install -y krb5-libs libicu openssl-libs zlib"
 inside 1 public csharp "cd /tmp/ && wget https://dot.net/v1/dotnet-install.sh"
 inside 1 root csharp "cd /tmp/ && chmod +x dotnet-install.sh"
 inside 1 public csharp "cd /tmp/ && ./dotnet-install.sh --channel $local__dotnet_version_short"
