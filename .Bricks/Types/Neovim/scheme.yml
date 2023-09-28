@@ -9,7 +9,6 @@ services:
     tty: true
     container_name: ${project_name}-neovim
     volumes:
-      - ../../../Bridge:/bridge:rw
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     ports:
       - 127.0.0.1:10100:10100
