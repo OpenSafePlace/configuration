@@ -35,7 +35,7 @@ esac
 space_null
 ##
 ## Monitor of containers
-docker stats --all --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}" >&3
+podman stats --all --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}" >&3
 ##
 space_null
 ##

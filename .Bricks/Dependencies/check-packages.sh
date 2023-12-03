@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # General process
-## Check docker package
-(docker -v &>/dev/null) || {
+## Check podman package
+(podman -v &>/dev/null) || {
 ##
 ## Output warning info
-warning "Пакет 'docker' не установлен"
+warning "Пакет 'podman' не установлен"
 warning "Без него работа проекта невозможна"
 warning "Процесс остановлен"
 ##
@@ -16,11 +16,11 @@ warning "Процесс остановлен"
 exit 1
 }
 ##
-## Check docker-compose package
-(docker-compose -v &>/dev/null) || {
+## Check podman-compose package
+(podman-compose -v &>/dev/null) || {
 ##
 ## Output warning info
-warning "Пакет 'docker-compose' не установлен"
+warning "Пакет 'podman-compose' не установлен"
 warning "Без него работа проекта невозможна"
 warning "Процесс остановлен"
 ##
@@ -61,21 +61,6 @@ warning "Процесс остановлен"
 exit 1
 }
 ##
-## Check docker-compose package
-($(docker-compose -v \| cut -c 24-24) == "1") 2> /dev/null || {
-##
-## Output warning info
-warning "Требуется 'docker-compose' v1"
-warning "Без него работа проекта невозможна"
-warning "Процесс остановлен"
-##
-## Message exit
-. $global__project_main_folder/.Bricks/Dependencies/message-exit.sh
-##
-## Exit with code
-exit 1
-}
-##
 ## Check openssl package
 (openssl version &>/dev/null) || {
 ##
@@ -91,11 +76,11 @@ warning "Процесс остановлен"
 exit 1
 }
 ##
-## Check docker package
-(docker ps -a &>/dev/null) || {
+## Check podman package
+(podman ps -a &>/dev/null) || {
 ##
 ## Output warning info
-warning "Пакет 'docker' не запущен"
+warning "Пакет 'podman' не запущен"
 warning "Без него работа проекта невозможна"
 warning "Процесс остановлен"
 ##

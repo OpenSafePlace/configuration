@@ -37,11 +37,11 @@ info "Ожидайте..."
 ##
 space
 ##
-docker stop $(docker ps -a -q)
+podman stop $(podman ps -a -q)
 ##
 info "Все контейнеры остановлены"
 ##
-docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name start
+podman-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name start
 ##
 space
 ##

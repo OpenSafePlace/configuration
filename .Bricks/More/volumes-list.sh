@@ -8,6 +8,6 @@ space
 ##
 space_null
 ##
-docker volume ls >&3
+podman volume ls >&3
 ##
 space_null

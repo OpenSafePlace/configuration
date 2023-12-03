@@ -8,6 +8,6 @@ space
 ##
 space_null
 ##
-docker images -a --format "table {{.ID}}\t{{.Repository}}\t{{.Size}}" >&3
+podman images -a --format "table {{.ID}}\t{{.Repository}}\t{{.Size}}" >&3
 ##
 space_null

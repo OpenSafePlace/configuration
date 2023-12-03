@@ -107,7 +107,7 @@ case $choice in
 esac
 ##
 ## Remove containers, networks and volumes of project
-project_os=$global__project_os project_os_lowercase=$(echo $global__project_os | tr '[:upper:]' '[:lower:]') project_os_version=$global__project_os_version docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name down -v --rmi all --remove-orphans
+project_os=$global__project_os project_os_lowercase=$(echo $global__project_os | tr '[:upper:]' '[:lower:]') project_os_version=$global__project_os_version podman-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name down -v --remove-orphans
 ##
 ## Delete config file
 sh -c "rm -f $global__project_main_folder/.project+settings"

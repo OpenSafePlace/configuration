@@ -43,20 +43,19 @@ global__project_create_time=$(date '+%H:%M:%S (%d/%m/%Y)')
 global__project_list_types=$(cd ./.Bricks/Types && ls -md -- *)
 global__project_host_cpu_type=$(uname -m)
 global__project_power="highest"
-global__project_cpu_cores_count=$(docker system info --format '{{.NCPU}}')
-global__project_mem_count=$(docker system info --format '{{.MemTotal}}' | awk '{ print int($1/1024/1024) }')
+global__project_cpu_cores_count=$(podman system info -f json | jq -r '.host["cpus"]')
+global__project_mem_count=$(podman system info -f json | jq -r '.host["memTotal"]' | awk '{ print int($1/1024/1024) }')
 global__project_keys=()
 global__project_host_user=$(whoami)
+global__cmt_name="podman"
 ##
 ## Determine the OS type
 [ "$OSTYPE" == "linux-gnu" ] &&
 global__project_host_os_type="linux" ||
 global__project_host_os_type="macOS"
 ##
-## Choose Docker sock
-[ "$global__project_host_os_type" == "linux" ] &&
-global__project_host_docker_sock="unix:///run/docker.sock" ||
-global__project_host_docker_sock="unix:///var/run/docker.sock"
+## Choose sock
+global__project_host_cmt_sock=$(podman info -f json | jq -r '.host["remoteSocket"]["path"]')
 ##
 ## Get host ip
 [ "$global__project_host_os_type" == "linux" ] &&
@@ -67,6 +66,9 @@ global__project_host_private_ip=$(ipconfig getifaddr en0)
 [ "$global__project_host_os_type" == "linux" ] &&
 global__project_display=":0" ||
 global__project_display="${global__project_host_private_ip}:0"
+##
+## Configure cmt
+export project_name=${global__project_name}
 ##
 ## Show current date & time
 info "$(date '+%H:%M:%S (%d/%m/%Y)')"
@@ -120,16 +122,16 @@ info "Ожидайте..."
 space
 ##
 ## Stop all containers
-docker stop $(docker ps -a -q)
+podman stop $(podman ps -a -q)
 ##
 ## Install and configure packages
 . $global__project_main_folder/.Bricks/Types/$global__project_type/actions/create.sh
 ##
 ## Setting the number of containers in scheme file
-global__project_containers_count_all=$(docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml ps --services | wc -l | tr -d ' ')
+global__project_containers_count_all=$(podman-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name ps | sed '1d' | wc -l | tr -d ' ')
 ##
 ## Restart containers
-docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name restart
+podman-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name restart
 ##
 ## Use GUI mode if needed
 . $global__project_main_folder/.Bricks/Dependencies/use-gui.sh

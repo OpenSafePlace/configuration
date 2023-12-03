@@ -25,7 +25,7 @@
 - Не исключается возможность работы на более ранних версиях macOS.
 
 # Для использования проекта нужно установить зависимости
-- Docker (https://docs.docker.com/engine/install). Необходим docker (v2) и docker-compose (v1);
+- Podman (https://podman.io/docs/installation). Необходимы podman (v4.8.0) и podman-compose (v1.0.6);
 - OpenSSL (протестировано v3.0.8) или LibreSSL (протестировано v3.3.6);
 - XQuartz (https://www.xquartz.org, протестировано v2.8.4). Опционально, только для macOS. Требуется для поддержки GUI.
 
@@ -39,6 +39,7 @@
 # Проект выражает благодарность
 - Linux (https://www.kernel.org/);
 - Fedora Linux (https://getfedora.org/);
+- Podman (https://podman.io/);
 - Docker (https://www.docker.com/);
 - Python (https://www.python.org/);
 - Microsoft (https://dotnet.microsoft.com/, https://code.visualstudio.com/);

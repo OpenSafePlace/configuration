@@ -37,7 +37,7 @@ info "Ожидайте..."
 ##
 space
 ##
-docker-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name stop
+podman-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name stop
 ##
 info "Все контейнеры проекта остановлены"
 ##

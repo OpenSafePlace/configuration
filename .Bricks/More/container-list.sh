@@ -8,6 +8,6 @@ space
 ##
 space_null
 ##
-docker ps -as --format 'table {{.ID}}\t{{.Names}}\t{{.Size}}\t{{.Status}}' >&3
+podman ps -as --format 'table {{.ID}}\t{{.Names}}\t{{.Size}}\t{{.Status}}' >&3
 ##
 space_null

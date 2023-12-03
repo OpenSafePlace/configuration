@@ -9,11 +9,11 @@ space
 space_null
 ##
 ## Output disk usage
-docker system df >&3
+podman system df >&3
 ##
 space_null
 ##
 ## Output all containers
-docker ps -a >&3
+podman ps -a >&3
 ##
 space_null

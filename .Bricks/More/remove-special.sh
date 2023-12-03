@@ -74,13 +74,13 @@ info "Ожидайте..."
 space
 ##
 ## Stop containers
-docker stop $(docker ps -a -q -f "name=${local__project_other_name}")
+podman stop $(podman ps -a -q -f "name=${local__project_other_name}")
 ##
 ## Delete all containers
-docker rm $(docker ps -a -q -f "name=${local__project_other_name}")
+podman rm $(podman ps -a -q -f "name=${local__project_other_name}")
 ##
 ## Delete all dangling volumes
-docker volume rm $(docker volume ls -qf dangling=true)
+podman volume rm $(podman volume ls -qf dangling=true)
 ##
 ## Unset local vars
 unset local__project_other_name

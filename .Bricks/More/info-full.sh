@@ -8,6 +8,6 @@ space
 ##
 space_null
 ##
-docker system df -v >&3
+podman system df -v >&3
 ##
 space_null

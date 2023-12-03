@@ -24,6 +24,6 @@ case $choice in
     ;;
 esac
 ##
-docker stop $(docker ps -a -q)
+podman stop $(podman ps -a -q)
 ##
 info "Все контейнеры остановлены"

@@ -19,21 +19,14 @@ exit 1
 ## Include
 source $global__project_main_folder/.project+settings
 ##
-## Vars Docker
-export project_name=${project_name}
-export project_os_version=${project_os_version}
-export DOCKER_HOST=${project_host}
-export DOCKER_CLIENT_TIMEOUT=120
-export COMPOSE_HTTP_TIMEOUT=120
-##
 ## Vars global
 global__project_name=${project_name}
 global__project_type=${project_type}
 global__project_gui=${project_gui}
 global__project_beep=${project_beep}
 global__project_power=${project_power}
-global__project_cpu_cores_count=$(docker system info --format '{{.NCPU}}')
-global__project_mem_count=$(docker system info --format '{{.MemTotal}}' | awk '{ print int($1/1024/1024) }')
+global__project_cpu_cores_count=$(podman info -f json | jq -r '.host["cpus"]')
+global__project_mem_count=$(podman info -f json | jq -r '.host["memTotal"]' | awk '{ print int($1/1024/1024) }')
 global__project_os=${project_os}
 global__project_os_version=${project_os_version}
 global__project_display=${project_display}
@@ -42,8 +35,8 @@ global__project_host_user=$(whoami)
 global__project_host_private_ip=${project_host_private_ip}
 global__project_host_os_type=${project_host_os_type}
 global__project_host_cpu_type=${project_host_cpu_type}
-global__project_host_docker_sock=${project_host_docker_sock}
+global__project_host_cmt_sock=${project_host_cmt_sock}
 global__project_containers_count_all=$([ "$project_containers_count_all" ] && echo $project_containers_count_all || echo 1)
-global__project_containers_count_created=$(docker ps -a -f "name=${global__project_name}-" | sed '1d' | wc -l | xargs)
-global__project_containers_count_running=$(docker container ls -f "name=${global__project_name}-" | sed '1d' | wc -l | xargs)
+global__project_containers_count_created=$(podman ps -a -f "name=${global__project_name}-" | sed '1d' | wc -l | xargs)
+global__project_containers_count_running=$(podman container ls -f "name=${global__project_name}-" | sed '1d' | wc -l | xargs)
 global__project_script_name=${0##*/}

@@ -29,19 +29,19 @@ info "Ожидайте..."
 space
 ##
 ## Stop all containers
-docker stop $(docker ps -a -q)
+podman stop $(podman ps -a -q)
 ##
 ## Delete all containers
-docker container prune -f
+podman container prune -f
 ##
 ## Delete all images
-docker image prune -f
+podman image prune -f
 ##
 ## Delete all volumes
-docker volume prune -f
+podman volume prune -f
 ##
 ## Delete all networks
-docker network prune -f
+podman network prune -f
 ##
 ## Delete config file
 sh -c "rm -f $global__project_main_folder/.project+settings"

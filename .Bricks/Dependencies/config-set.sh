@@ -16,5 +16,5 @@ echo "project_create_time=\"$global__project_create_time\"" >> $global__project_
 echo "project_host_private_ip=\"$global__project_host_private_ip\"" >> $global__project_main_folder/.project+settings
 echo "project_host_os_type=\"$global__project_host_os_type\"" >> $global__project_main_folder/.project+settings
 echo "project_host_cpu_type=\"$global__project_host_cpu_type\"" >> $global__project_main_folder/.project+settings
-echo "project_host_docker_sock=\"$global__project_host_docker_sock\"" >> $global__project_main_folder/.project+settings
+echo "project_host_cmt_sock=\"$global__project_host_cmt_sock\"" >> $global__project_main_folder/.project+settings
 echo "project_containers_count_all=\"$global__project_containers_count_all\"" >> $global__project_main_folder/.project+settings

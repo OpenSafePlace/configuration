@@ -9,6 +9,6 @@ space
 space_null
 ##
 ## Output list networks
-docker network ls >&3
+podman network ls >&3
 ##
 space_null
