@@ -52,7 +52,7 @@ case $choice in
     ;;
 esac
 ##
-global__project_keys_new=()
+declare -A global__project_keys_new=()
 ##
 ## Get project keys
 . $global__project_main_folder/.Bricks/Dependencies/keys-get.sh
@@ -60,7 +60,7 @@ global__project_keys_new=()
 space
 ##
 ## Check general key
-[[ $local__project_key_text == "ОШИБКА" ]] && {
+[[ $global__project_keys_status == "ОШИБКА" ]] && {
 ##
 ## Output warning info
 warning "Введен неправильный пароль"
@@ -77,9 +77,12 @@ exit 1
 . $global__project_main_folder/.Bricks/Types/$global__project_type/actions/protect.sh
 ##
 ## Apply new keys
-for i in $(seq 0 $((${#global__project_keys[@]}-1)))
+global__project_keys_new_titles="${!global__project_keys_new[@]}"
+global__project_keys_new_values="${global__project_keys_new[@]}"
+##
+for ((i=0; i<${#global__project_keys_new_titles[@]}; i++));
 do
-    global__project_keys[$i]=${global__project_keys_new[$i]}
+    global__project_keys[${global__project_keys_new_titles[$i]}]=${global__project_keys_new_values[$i]}
 done
 ##
 space

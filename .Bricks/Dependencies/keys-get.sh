@@ -17,11 +17,12 @@ exit 1
 }
 ##
 ## Include
-source $global__project_main_folder/.project+keys
 ##
 ## Vars global
-global__project_keys_count=${project_keys_count}
-global__project_keys=()
+declare -A global__project_keys=()
+global__project_keys_titles=()
+global__project_keys_values=()
+global__project_keys_status=""
 ##
 info "Видимость вводимых символов на время отключена"
 ##
@@ -35,23 +36,12 @@ read -s -p '' choice
 ##
 space_null
 ##
-for i in $(seq 1 $global__project_keys_count)
-do
+global__project_keys_titles+=($(echo $(head -n 1 .project+keys) | openssl base64 -d | openssl enc -d -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -k $choice))
+global__project_keys_values+=($(echo $(tail -n +2 .project+keys | head -n 1) | openssl base64 -d | openssl enc -d -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -k $choice))
 ##
-## Get keys from file
-local__project_key_text="project_keys_${i}_text"
-local__project_key_text="${!local__project_key_text}"
-local__project_key_text=$(echo $local__project_key_text | openssl base64 -d | openssl enc -d -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -k $choice)
-local__project_key_text_count=$(echo $local__project_key_text | wc -c | bc)
-##
-[[ $local__project_key_text_count != 45 ]] && local__project_key_text="ОШИБКА" ||
-[[ $local__project_key_text == *[![:ascii:]]* ]] && local__project_key_text="ОШИБКА"
-##
-local__project_key_info="project_keys_${i}_info"
-global__project_keys+=($local__project_key_text "${!local__project_key_info}")
-##
+for ((i=0; i<${#global__project_keys_titles[@]}; i++)); do
+  global__project_keys[${global__project_keys_titles[$i]}]=${global__project_keys_values[$i]}
+  global__project_keys_status=${global__project_keys_values[$i]}
 done
-##
-## Unset local vars
-unset local__project_key_text_count
-unset local__project_key_info
+
+[[ $global__project_keys_status == *[![:ascii:]]* ]] && global__project_keys_status="ОШИБКА"

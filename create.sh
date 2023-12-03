@@ -45,9 +45,10 @@ global__project_host_cpu_type=$(uname -m)
 global__project_power="highest"
 global__project_cpu_cores_count=$(podman system info -f json | jq -r '.host["cpus"]')
 global__project_mem_count=$(podman system info -f json | jq -r '.host["memTotal"]' | awk '{ print int($1/1024/1024) }')
-global__project_keys=()
 global__project_host_user=$(whoami)
 global__cmt_name="podman"
+##
+declare -A global__project_keys=()
 ##
 ## Determine the OS type
 [ "$OSTYPE" == "linux-gnu" ] &&

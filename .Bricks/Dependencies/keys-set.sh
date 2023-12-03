@@ -30,27 +30,15 @@ space
 ##
 info "Рекомендуется записать пароль"
 ##
-## Count keys
-global__project_keys_count=$((${#global__project_keys[@]}/2))
-##
 ## Create project file with encrypted keys
 sh -c "touch $global__project_main_folder/.project+keys"
 sh -c "chmod 600 ./.project+keys"
 ##
-echo "project_keys_count=\"$global__project_keys_count\"" > $global__project_main_folder/.project+keys
+typeset -a global__project_keys_titles=( "${!global__project_keys[@]}" )
 ##
-for i in $(seq 0 $(($global__project_keys_count-1)))
-do
-##
-local__project_key_text_enc=$(echo ${global__project_keys[$(($i*2))]} | openssl enc -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -salt -k $choice | openssl base64 | tr -d '\n')
-local__project_key_info=${global__project_keys[$(($i*2+1))]}
-##
-## Add encrypted keys to file
-echo "project_keys_$(($i+1))_text=\"$local__project_key_text_enc\"" >> $global__project_main_folder/.project+keys
-echo "project_keys_$(($i+1))_info=\"$local__project_key_info\"" >> $global__project_main_folder/.project+keys
-##
-done
+echo $(echo "${!global__project_keys[@]}" | openssl enc -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -salt -k $choice | openssl base64 | tr -d '\n') > $global__project_main_folder/.project+keys
+echo $(echo "${global__project_keys[@]}" | openssl enc -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -salt -k $choice | openssl base64 | tr -d '\n') >> $global__project_main_folder/.project+keys
 ##
 ## Unset local vars
-unset local__project_key_text_enc
-unset local__project_key_info
+unset global__project_keys
+unset global__project_keys_titles

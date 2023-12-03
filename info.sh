@@ -77,7 +77,7 @@ space
 space
 ##
 ## Check general key
-[[ $local__project_key_text == "ОШИБКА" ]] && {
+[[ $global__project_keys_status == "ОШИБКА" ]] && {
 ##
 ## Output warning info
 warning "Введен неправильный пароль"
