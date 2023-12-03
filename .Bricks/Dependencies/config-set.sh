@@ -6,7 +6,6 @@ sh -c "touch $global__project_main_folder/.project+settings"
 sh -c "chmod 600 ./.project+settings"
 echo "project_name=\"$global__project_name\"" > $global__project_main_folder/.project+settings
 echo "project_type=\"$global__project_type\"" >> $global__project_main_folder/.project+settings
-echo "project_gui=\"$global__project_gui\"" >> $global__project_main_folder/.project+settings
 echo "project_beep=\"$global__project_beep\"" >> $global__project_main_folder/.project+settings
 echo "project_power=\"$global__project_power\"" >> $global__project_main_folder/.project+settings
 echo "project_os=\"$global__project_os\"" >> $global__project_main_folder/.project+settings

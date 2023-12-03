@@ -133,9 +133,6 @@ global__project_containers_count_all=$(podman-compose -f $global__project_main_f
 ## Restart containers
 podman-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name restart
 ##
-## Use GUI mode if needed
-. $global__project_main_folder/.Bricks/Dependencies/use-gui.sh
-##
 ## Preparation of the project after the launch of containers
 . $global__project_main_folder/.Bricks/Types/$global__project_type/actions/start.sh
 ##

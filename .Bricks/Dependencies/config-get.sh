@@ -22,7 +22,6 @@ source $global__project_main_folder/.project+settings
 ## Vars global
 global__project_name=${project_name}
 global__project_type=${project_type}
-global__project_gui=${project_gui}
 global__project_beep=${project_beep}
 global__project_power=${project_power}
 global__project_cpu_cores_count=$(podman info -f json | jq -r '.host["cpus"]')

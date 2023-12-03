@@ -25,9 +25,6 @@ global__project_main_folder="."
 ## Execute types set
 . $global__project_main_folder/.Bricks/Dependencies/types-set-execute.sh
 ##
-## Use GUI mode if needed
-. $global__project_main_folder/.Bricks/Dependencies/use-gui.sh
-##
 ## Show current date & time
 info "$(date '+%H:%M:%S (%d/%m/%Y)')"
 ##
