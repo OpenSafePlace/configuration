@@ -49,4 +49,4 @@ sh -c "rm -f $global__project_main_folder/.project+settings"
 ## Delete keys file
 sh -c "rm -f $global__project_main_folder/.project+keys"
 ##
-info "Все проекты на вашем ПК удалены"
+info "Все проекты удалены"
