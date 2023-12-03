@@ -17,5 +17,6 @@ Bridge/*
 Backups/*
 !Backups/_README.md
 ##
+.Bricks/Certificates/*
 .Bricks/Containers/.*
 .Bricks/Types/.*
