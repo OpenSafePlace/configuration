@@ -39,3 +39,6 @@ global__project_containers_count_all=$([ "$project_containers_count_all" ] && ec
 global__project_containers_count_created=$(podman ps -a -f "name=${global__project_name}-" | sed '1d' | wc -l | xargs)
 global__project_containers_count_running=$(podman container ls -f "name=${global__project_name}-" | sed '1d' | wc -l | xargs)
 global__project_script_name=${0##*/}
+##
+## Configure CMT
+export project_name=${global__project_name}

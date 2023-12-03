@@ -68,7 +68,7 @@ global__project_host_private_ip=$(ipconfig getifaddr en0)
 global__project_display=":0" ||
 global__project_display="${global__project_host_private_ip}:0"
 ##
-## Configure cmt
+## Configure CMT
 export project_name=${global__project_name}
 ##
 ## Show current date & time
