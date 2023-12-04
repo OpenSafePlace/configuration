@@ -137,9 +137,6 @@ podman-compose -f $global__project_main_folder/.Bricks/Types/$global__project_ty
 ## Preparation of the project after the launch of containers
 . $global__project_main_folder/.Bricks/Types/$global__project_type/actions/start.sh
 ##
-## Update project params
-. $global__project_main_folder/.Bricks/Types/$global__project_type/actions/update-params.sh
-##
 ## Set project config
 . $global__project_main_folder/.Bricks/Dependencies/config-set.sh
 ##
