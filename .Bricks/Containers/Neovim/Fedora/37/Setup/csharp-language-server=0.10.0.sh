@@ -1,0 +1,1 @@
+../../../../../Sources/Fedora/37/Setup/csharp-language-server=0.10.0.sh

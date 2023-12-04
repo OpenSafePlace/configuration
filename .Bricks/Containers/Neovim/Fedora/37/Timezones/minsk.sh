@@ -1,0 +1,1 @@
+../../../../../Sources/Fedora/37/Timezones/minsk.sh
