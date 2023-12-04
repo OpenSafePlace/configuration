@@ -35,7 +35,7 @@ inside 1 root $local__container_name_lowercase "mysql -e \"DROP USER IF EXISTS '
 inside 1 root $local__container_name_lowercase "mysql -e \"DROP USER IF EXISTS 'mysql'@'localhost';\""
 inside 1 root $local__container_name_lowercase "mysql -e \"DROP DATABASE IF EXISTS test;\""
 inside 1 root $local__container_name_lowercase "mysql -e \"CREATE DATABASE base;\""
-inside 1 root $local__container_name_lowercase "mysql -e \"CREATE USER 'private'@'${global__project_mariadb_allow_ips}' IDENTIFIED BY '${global__project_keys["[c:$local__container_name_lowercase]+[u:private]+[p:mysql]"]}';\""
+inside 13 root $local__container_name_lowercase "mysql -e \"CREATE USER 'private'@'${global__project_mariadb_allow_ips}' IDENTIFIED BY '${global__project_keys["[c:$local__container_name_lowercase]+[u:private]+[p:mysql]"]}';\""
 inside 1 root $local__container_name_lowercase "mysql -e \"GRANT ALL PRIVILEGES ON base.* TO 'private'@'${global__project_mariadb_allow_ips}' WITH GRANT OPTION;\""
 inside 1 root $local__container_name_lowercase "mysql -e \"FLUSH PRIVILEGES;\""
 inside 1 mysql $local__container_name_lowercase "pkill -QUIT mariadbd"
