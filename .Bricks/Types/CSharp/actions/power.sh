@@ -20,9 +20,9 @@ case $choice in
     ## Set power mode
     global__project_power="highest"
     ##
-    ### Container #1
+    ## Container #1
     local__container_name="CSharp"
-    ###
+    ##
     . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Power/update.sh
     ##
     info "Включен режим максимальной производительности"
@@ -33,9 +33,9 @@ case $choice in
     ## Set power mode
     global__project_power="high"
     ##
-    ### Container #1
+    ## Container #1
     local__container_name="CSharp"
-    ###
+    ##
     . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Power/update.sh
     ##
     info "Включен режим высокой производительности"
@@ -46,9 +46,9 @@ case $choice in
     ## Set power mode
     global__project_power="medium"
     ##
-    ### Container #1
+    ## Container #1
     local__container_name="CSharp"
-    ###
+    ##
     . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Power/update.sh
     ##
     info "Включен режим средней производительности"
@@ -59,9 +59,9 @@ case $choice in
     ## Set power mode
     global__project_power="low"
     ##
-    ### Container #1
+    ## Container #1
     local__container_name="CSharp"
-    ###
+    ##
     . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Power/update.sh
     ##
     info "Включен режим низкой производительности"
@@ -72,9 +72,9 @@ case $choice in
     ## Set power mode
     global__project_power="lowest"
     ##
-    ### Container #1
+    ## Container #1
     local__container_name="CSharp"
-    ###
+    ##
     . $global__project_main_folder/.Bricks/Containers/CSharp/$global__project_os/$global__project_os_version/Power/update.sh
     ##
     info "Включен режим минимальной производительности"
