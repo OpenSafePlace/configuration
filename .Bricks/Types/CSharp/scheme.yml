@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+  csharp:
+    build:
+      context: .
+      dockerfile: ../../../.Bricks/Containers/CSharp/${project_os}/${project_os_version}/foundation
+    image: custom-${project_os_lowercase}-${project_os_version}-v1
+    hostname: csharp
+    tty: true
+    container_name: ${project_name}-csharp
+    networks:
+      - net
+
+networks:
+  net:
+    name: ${project_name}-net
+    driver: bridge
