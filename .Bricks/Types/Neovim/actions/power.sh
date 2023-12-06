@@ -23,6 +23,8 @@ case $choice in
     ### Container #1
     local__container_name="Neovim"
     ###
+    . $global__project_main_folder/.Bricks/Containers/Neovim/$global__project_os/$global__project_os_version/Power/update.sh
+    ##
     info "Включен режим максимальной производительности"
     ;;
 "2")
@@ -34,6 +36,8 @@ case $choice in
     ### Container #1
     local__container_name="Neovim"
     ###
+    . $global__project_main_folder/.Bricks/Containers/Neovim/$global__project_os/$global__project_os_version/Power/update.sh
+    ##
     info "Включен режим высокой производительности"
     ;;
 "3")
@@ -45,6 +49,8 @@ case $choice in
     ### Container #1
     local__container_name="Neovim"
     ###
+    . $global__project_main_folder/.Bricks/Containers/Neovim/$global__project_os/$global__project_os_version/Power/update.sh
+    ##
     info "Включен режим средней производительности"
     ;;
 "4")
@@ -56,6 +62,8 @@ case $choice in
     ### Container #1
     local__container_name="Neovim"
     ###
+    . $global__project_main_folder/.Bricks/Containers/Neovim/$global__project_os/$global__project_os_version/Power/update.sh
+    ##
     info "Включен режим низкой производительности"
     ;;
 "5")
@@ -67,6 +75,8 @@ case $choice in
     ### Container #1
     local__container_name="Neovim"
     ###
+    . $global__project_main_folder/.Bricks/Containers/Neovim/$global__project_os/$global__project_os_version/Power/update.sh
+    ##
     info "Включен режим минимальной производительности"
     ;;
 *)
