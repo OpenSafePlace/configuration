@@ -19,6 +19,7 @@ global__project_keys=(
 project_name=$global__project_name project_os=$global__project_os project_os_lowercase=$(echo $global__project_os | tr '[:upper:]' '[:lower:]') project_os_version=$global__project_os_version project_display=$global__project_display podman-compose -f $global__project_main_folder/.Bricks/Types/$global__project_type/scheme.yml -p $global__project_name up --build -d
 ##
 ## Install and configure packages
+##
 ### Container #1
 local__container_name="Base"
 ###
