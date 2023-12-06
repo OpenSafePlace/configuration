@@ -21,6 +21,7 @@ local__project_power_percent=$(($global__project_cpu_cores_count * (1 * 100 / 3 
 local__project_power_percent=$(($global__project_cpu_cores_count * 8))
 ##
 ## Start process
-inside 5 root $local__container_name_lowercase "cpulimit --limit=$local__project_power_percent --lazy --include-children nginx >> /var/log/nginx/run.log"
+inside 5 root $local__container_name_lowercase "nginx >> /var/log/nginx/run.log"
+inside 5 root $local__container_name_lowercase "cpulimit --limit=$local__project_power_percent --lazy --include-children --exe=nginx >> /var/log/nginx/run.log"
 ##
 info "В контейнере '$local__container_name' сервис 'nginx' запущен"
