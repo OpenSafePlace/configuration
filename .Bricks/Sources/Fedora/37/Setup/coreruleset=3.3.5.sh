@@ -25,6 +25,7 @@ warning "В контейнере '$local__container_name' НЕ настроен 
 ## Unset local vars
 unset local__container_name_lowercase
 unset local__coreruleset_version_full
+unset local__coreruleset_hash
 ##
 ## Information about the coreruleset source (license, tutorial and other)
 ## https://coreruleset.org/
