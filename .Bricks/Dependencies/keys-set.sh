@@ -34,8 +34,6 @@ info "Рекомендуется записать пароль"
 sh -c "touch $global__project_main_folder/.project+keys"
 sh -c "chmod 600 ./.project+keys"
 ##
-typeset -a global__project_keys_titles=( "${!global__project_keys[@]}" )
-##
 echo $(echo "${!global__project_keys[@]}" | openssl enc -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -salt -k $choice | openssl base64 | tr -d '\n') > $global__project_main_folder/.project+keys
 echo $(echo "${global__project_keys[@]}" | openssl enc -aes-256-cfb -md sha512 -pbkdf2 -iter 900000 -salt -k $choice | openssl base64 | tr -d '\n') >> $global__project_main_folder/.project+keys
 ##

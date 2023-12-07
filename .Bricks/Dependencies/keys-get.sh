@@ -44,4 +44,4 @@ for ((i=0; i<${#global__project_keys_titles[@]}; i++)); do
   global__project_keys_status=${global__project_keys_values[$i]}
 done
 
-[[ $global__project_keys_status == *[![:ascii:]]* ]] && global__project_keys_status="ОШИБКА"
+[[ ($global__project_keys_status == *[![:ascii:]]*) || ($global__project_keys_status == "") ]] && global__project_keys_status="ОШИБКА"

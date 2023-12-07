@@ -77,6 +77,7 @@ exit 1
 . $global__project_main_folder/.Bricks/Types/$global__project_type/actions/protect.sh
 ##
 ## Apply new keys
+declare -A global__project_keys=()
 global__project_keys_new_titles="${!global__project_keys_new[@]}"
 global__project_keys_new_values="${global__project_keys_new[@]}"
 ##
