@@ -121,8 +121,8 @@ global__project_power="high"
 ##
 ## Create keys
 global__project_keys=(
-    ["[c:nginx]+[u:private]+[p:sudo]"]=$(openssl rand -base64 33)
-    ["[c:nginx]+[u:private]+[p:htpasswd]"]=$(openssl rand -base64 33)
+    [[c:nginx]+[u:private]+[p:sudo]]=$(openssl rand -base64 33)
+    [[c:nginx]+[u:private]+[p:htpasswd]]=$(openssl rand -base64 33)
 )
 ##
 ## Create new containers, networks and volumes

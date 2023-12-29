@@ -12,8 +12,8 @@ global__project_power="high"
 ##
 ## Create keys
 global__project_keys=(
-    ["[c:mariadb]+[u:private]+[p:sudo]"]=$(openssl rand -base64 33)
-    ["[c:mariadb]+[u:private]+[p:mysql]"]=$(openssl rand -base64 33)
+    [[c:mariadb]+[u:private]+[p:sudo]]=$(openssl rand -base64 33)
+    [[c:mariadb]+[u:private]+[p:mysql]]=$(openssl rand -base64 33)
 )
 ##
 ## Create new containers, networks and volumes

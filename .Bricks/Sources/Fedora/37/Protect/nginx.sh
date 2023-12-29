@@ -6,7 +6,7 @@ local__container_name_lowercase="${local__container_name,,}"
 ##
 ## Set password
 inside 1 root $local__container_name_lowercase "rm -f /etc/nginx/.htpasswd"
-inside 13 root $local__container_name_lowercase "htpasswd -cb5 /etc/nginx/.htpasswd layer_1 ${global__project_keys_new["[c:$local__container_name_lowercase]+[u:private]+[p:htpasswd]"]}"
+inside 13 root $local__container_name_lowercase "htpasswd -cb5 /etc/nginx/.htpasswd layer_1 ${global__project_keys_new[[c:$local__container_name_lowercase]+[u:private]+[p:htpasswd]]}"
 ##
 ## Generate certificate
 inside 1 root $local__container_name_lowercase "rm -f /etc/pki/nginx/private/server.key /etc/pki/nginx/server.crt"

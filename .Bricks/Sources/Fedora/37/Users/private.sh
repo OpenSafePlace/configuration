@@ -22,7 +22,7 @@ inside 1 private $local__container_name_lowercase "ln -s /bridge /home/private/b
 inside 1 private $local__container_name_lowercase "ln -s /project /home/private/project"
 ##
 ## Set password
-inside 13 root $local__container_name_lowercase "echo 'private:${global__project_keys["[c:$local__container_name_lowercase]+[u:private]+[p:sudo]"]}' | chpasswd"
+inside 13 root $local__container_name_lowercase "echo 'private:${global__project_keys[[c:$local__container_name_lowercase]+[u:private]+[p:sudo]]}' | chpasswd"
 ##
 ## Get root privileges
 inside 1 root $local__container_name_lowercase "usermod -aG wheel private"

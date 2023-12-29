@@ -3,8 +3,8 @@
 # General process
 ## Create new keys
 global__project_keys_new=(
-    ["[c:nginx]+[u:private]+[p:sudo]"]=$(openssl rand -base64 33)
-    ["[c:nginx]+[u:private]+[p:htpasswd]"]=$(openssl rand -base64 33)
+    [[c:nginx]+[u:private]+[p:sudo]]=$(openssl rand -base64 33)
+    [[c:nginx]+[u:private]+[p:htpasswd]]=$(openssl rand -base64 33)
 )
 ##
 ## Replace keys

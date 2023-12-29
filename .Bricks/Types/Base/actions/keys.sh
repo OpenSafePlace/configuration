@@ -2,4 +2,4 @@
 
 # General process
 ## Output keys
-info "'[c:base]+[u:private]+[p:sudo]' => ['${global__project_keys["[c:base]+[u:private]+[p:sudo]"]}']"
+info "'[c:base]+[u:private]+[p:sudo]' => ['${global__project_keys[[c:base]+[u:private]+[p:sudo]]}']"

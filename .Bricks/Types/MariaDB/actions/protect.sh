@@ -3,8 +3,8 @@
 # General process
 ## Create new keys
 global__project_keys_new=(
-    ["[c:mariadb]+[u:private]+[p:sudo]"]=$(openssl rand -base64 33)
-    ["[c:mariadb]+[u:private]+[p:mysql]"]=$(openssl rand -base64 33)
+    [[c:mariadb]+[u:private]+[p:sudo]]=$(openssl rand -base64 33)
+    [[c:mariadb]+[u:private]+[p:mysql]]=$(openssl rand -base64 33)
 )
 ##
 ## Replace keys
