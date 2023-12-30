@@ -1,0 +1,1 @@
+../../../../../../Sources/Fedora/37/Setup/bash-language-server=5.0.0.sh

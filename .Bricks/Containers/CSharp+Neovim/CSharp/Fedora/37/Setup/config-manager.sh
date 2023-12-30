@@ -1,0 +1,1 @@
+../../../../../../Sources/Fedora/37/Setup/config-manager.sh
