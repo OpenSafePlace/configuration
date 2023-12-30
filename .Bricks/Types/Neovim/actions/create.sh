@@ -166,8 +166,6 @@ require("nvim-treesitter.configs").setup({
 
 local lspconfig = require("lspconfig")
 
-lspconfig.bashls.setup({})
-
 vim.keymap.set("n", "<leader>tt", function() vim.cmd("update") vim.cmd("FloatermNew --wintype=float --autoclose=2") end, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>dl", function() require("vscode").load("light") end, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>dd", function() require("vscode").load("dark") end, { noremap = true, silent = true })
@@ -193,7 +191,7 @@ global__project_power="high"
 ##
 ## Create keys
 global__project_keys=(
-    ['[c:neovim]+[u:private]+[p:sudo]']=$(openssl rand -base64 33)
+    [[c:neovim]+[u:private]+[p:sudo]]=$(openssl rand -base64 33)
 )
 ##
 ## Create new containers, networks and volumes
