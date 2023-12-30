@@ -12,7 +12,7 @@ global__project_power="high"
 ##
 ## Create keys
 global__project_keys=(
-    ['[c:csharp]+[u:private]+[p:sudo]']=$(openssl rand -base64 33)
+    [[c:csharp]+[u:private]+[p:sudo]]=$(openssl rand -base64 33)
 )
 ##
 ## Create new containers, networks and volumes
