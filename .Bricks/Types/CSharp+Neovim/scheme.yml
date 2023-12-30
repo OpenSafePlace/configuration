@@ -1,0 +1,35 @@
+version: '3.3'
+services:
+  csharp:
+    build:
+      context: .
+      dockerfile: ../../../.Bricks/Containers/CSharp/${project_os}/${project_os_version}/foundation
+    image: custom-${project_os_lowercase}-${project_os_version}-v1
+    hostname: csharp
+    tty: true
+    container_name: ${project_name}-csharp
+    volumes:
+      - project_files:/project:rw
+    networks:
+      - net
+
+  neovim:
+    build:
+      context: .
+      dockerfile: ../../../.Bricks/Containers/Neovim/${project_os}/${project_os_version}/foundation
+    image: custom-${project_os_lowercase}-${project_os_version}-v1
+    hostname: neovim
+    tty: true
+    container_name: ${project_name}-neovim
+    volumes:
+      - project_files:/project:rw
+    networks:
+      - net
+
+volumes:
+  project_files: {}
+
+networks:
+  net:
+    name: ${project_name}-net
+    driver: bridge
