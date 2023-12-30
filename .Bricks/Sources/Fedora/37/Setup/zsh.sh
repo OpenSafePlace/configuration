@@ -56,3 +56,6 @@ info "В контейнере '$local__container_name' настроен паке
 ##
 ## Unset local vars
 unset local__container_name_lowercase
+##
+## Information about the packages sources (license, tutorial and other)
+## https://packages.fedoraproject.org/pkgs/zsh/zsh/, https://packages.fedoraproject.org/pkgs/zsh-syntax-highlighting/zsh-syntax-highlighting/, https://packages.fedoraproject.org/pkgs/zsh-autosuggestions/zsh-autosuggestions/

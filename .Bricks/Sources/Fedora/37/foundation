@@ -1,2 +1,4 @@
 FROM registry.fedoraproject.org/fedora:37
 RUN dnf remove -y vi
+
+## https://registry.fedoraproject.org/repo/fedora/tags/
